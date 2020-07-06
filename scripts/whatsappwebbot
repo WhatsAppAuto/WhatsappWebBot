@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+from webwhatsapi import WhatsAPIDriver
+import os
+
+def main():
+    os.system('echo $SELENIUM')
+    print('Successfull')
+    #os.system('sudo chmod +x lib/geckodriver/geckodriver')
+    driver=WhatsAPIDriver(username="mkhase",loadstyles=True,headless=True)
+    driver.get_qr('qr.png')
+    driver.wait_for_login()
+
+
+
+if __name__=='__main__':
+    main()
