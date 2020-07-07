@@ -9,7 +9,8 @@ if [[ $(arch) == "x86_64" ]]; then
 elif [[ $(arch) == "armv7l" ]]; then
   wget https://github.com/jdonald/firefox-armhf/releases/download/60.5.0-esr/firefox-esr_60.5.0esr-1.deb9u1_armhf.deb
   if ! dpkg -i firefox-esr_60.5.0esr-1.deb9u1_armhf.deb; then
+    apt update
     apt install -f -y
   fi
-  rm firefox-esr_60.5.0est-1.deb9u1_armhf.deb
+  rm firefox-esr_60.5.0esr-1.deb9u1_armhf.deb
 fi
