@@ -21,7 +21,7 @@ class RunCommand(Command):
     def run(self):
         if not system('docker images | grep whatsappwebbot')==0:
             check_call(['docker','build','-t','whatsappwebbot','docker'])
-        system('docker run -it -v $(pwd):/data  whatsappwebbot /bin/bash -c "pip install -e . && whatsappwebbot"')
+        system('docker run -it -v $(pwd):/data  whatsappwebbot /bin/bash -c "pip3 install -e . && whatsappwebbot"')
 
 setup(
    name='Whatsapp Web Bot',
